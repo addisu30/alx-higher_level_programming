@@ -7,6 +7,8 @@ prints the following statistics:
     - Total file size up to that point.
     - Count of read status codes up to that point.
 """
+
+
 def print_stats(size, status_codes):
     """Print accumulated metrics.
 
@@ -17,6 +19,7 @@ def print_stats(size, status_codes):
     print("File size: {}".format(size))
     for key in sorted(status_codes):
         print("{}: {}".format(key, status_codes[key]))
+
 
 if __name__ == "__main__":
     import sys
