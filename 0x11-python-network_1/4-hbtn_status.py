@@ -5,7 +5,7 @@ import requests
 
 def status():
     """status"""
-    result = requests.get("https://intranet.hbtn.io/status")
+    result = requests.get("https://alx-intranet.hbtn.io/status")
 
     print("Body response:")
     print("\t- type: {}".format(type(result.text)))
