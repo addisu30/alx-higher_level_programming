@@ -12,7 +12,7 @@ if __name__ == "__main__":
     import MySQLdb
     db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
     c = db.cursor()
-    c.execute("""SELECT * FROM states WHERE name like "N%"\    
+    c.execute("""SELECT * FROM states WHERE name like "N%"\
             ORDER BY states.id ASC""")
     rows = c.fetchall()
     for row in rows:
