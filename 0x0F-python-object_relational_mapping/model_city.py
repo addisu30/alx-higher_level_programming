@@ -7,7 +7,7 @@ from model_state import Base, State
 
 class City(Base):
     """City class inherits from State class
-    
+
     Links to MySQL table 'cities'
 
     Attributes:
