@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Script creates State California and City San Francisco in database
+"""Lists all State objects and corresponding City objects
 Takes three arguments
     mysql username
     mysql password
@@ -17,7 +17,8 @@ if __name__ == "__main__":
     Base.metadata.create_all(engine)
     Session = sessionmaker()
     session = Session(bind=engine)
-    ca = State(name="California", cities=[City(name="San Francisco")])
-    session.add(ca)
-    session.commit()
+    for state in session.query(State).order_by(State.id).all():
+        print("{:d}: {}".format(state.id, state.name))
+        for city in state.cities:
+            print("    {:d}: {}".format(city.id, city.name))
     session.close()
