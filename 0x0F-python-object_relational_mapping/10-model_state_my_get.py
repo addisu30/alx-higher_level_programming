@@ -21,6 +21,6 @@ if __name__ == "__main__":
         for instance in instances:
             if instance.name == argv[4]:
                 print("{}".format(instance.id))
-            else:
-                print("Not found")
-            session.close()
+    else:
+         print("Not found")
+    session.close()
