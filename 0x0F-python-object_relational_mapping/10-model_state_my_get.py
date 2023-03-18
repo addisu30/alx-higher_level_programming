@@ -22,5 +22,5 @@ if __name__ == "__main__":
             if instance.name == argv[4]:
                 print("{}".format(instance.id))
     else:
-         print("Not found")
+        print("Not found")
     session.close()
