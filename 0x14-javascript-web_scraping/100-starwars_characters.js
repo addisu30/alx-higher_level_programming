@@ -15,7 +15,7 @@ request(url, function (error, response, body) {
         } else {
           def = JSON.parse(content);
           console.log(def.name);
-	}
+        }
       });
     });
   }
